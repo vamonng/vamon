@@ -1,0 +1,13 @@
+name: label
+on: pull_request
+
+jobs:
+  label:
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: vamon/label@master
+      with:
+        configuration-path: .github/label.yml
+        sync-labels: "tech-toc-system"
+        repo-token: "${{ secrets.GITHUB_TOKEN }}"
